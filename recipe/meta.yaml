@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/chipsalliance/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - no-python-build-isolation.patch
 
 build:
   number: 0
@@ -51,6 +53,7 @@ outputs:
       host:
         - capnproto
         - python
+        - pip
         - swig
         - orderedmultidict
         - python-build
