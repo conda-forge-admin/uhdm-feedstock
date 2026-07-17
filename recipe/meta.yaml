@@ -13,7 +13,7 @@ source:
     - no-python-build-isolation.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('uhdm', max_pin='x') }}
