@@ -22,4 +22,7 @@ cmake .. \
     -DUHDM_USE_HOST_CAPNP=ON
 
 make -j${CPU_COUNT}
+if [[ "$PKG_NAME" == "python-uhdm" ]]; then
+  $PYTHON -m pip install ./python --no-deps --no-build-isolation
+fi
 make install

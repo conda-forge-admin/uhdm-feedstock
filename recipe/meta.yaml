@@ -9,8 +9,6 @@ package:
 source:
   url: https://github.com/chipsalliance/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - no-python-build-isolation.patch
 
 build:
   number: 0
@@ -56,7 +54,6 @@ outputs:
         - pip
         - swig
         - orderedmultidict
-        - python-build
         - setuptools
         - {{ pin_subpackage("uhdm", exact=True) }}
       run:
